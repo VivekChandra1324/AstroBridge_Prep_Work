@@ -1,0 +1,50 @@
+# AstroBridge PrepWork
+# Install with:
+#   pip install -r requirements.txt \
+#       --extra-index-url https://download.pytorch.org/whl/cu121
+#
+# Then separately install the LLaVA package (DO NOT pip install before this file):
+#   git clone https://github.com/UniverseTBD/AstroLLaVA /tmp/AstroLLaVA
+#   pip install --no-deps -e /tmp/AstroLLaVA
+#
+# IMPORTANT: numpy must stay <2; torch 2.1.2 breaks with numpy 2.x
+
+# ── PyTorch (CUDA 12.1, sm_90 = H100) ───────────────────────────────────────
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch==2.1.2
+torchvision==0.16.2
+torchaudio==2.1.2
+
+# ── HuggingFace core (pinned to what LLaVA-1.5 requires) ────────────────────
+transformers==4.37.2
+tokenizers==0.15.1
+accelerate==0.27.2
+huggingface_hub==0.20.3
+datasets==2.18.0
+
+# ── Sentence Transformers (exact model used in the paper's evaluation) ────────
+sentence-transformers==2.6.1
+
+# ── LLM / tokenizer deps ─────────────────────────────────────────────────────
+sentencepiece==0.1.99
+protobuf==3.20.3
+einops==0.6.1
+
+# ── Scientific Python ─────────────────────────────────────────────────────────
+numpy==1.26.4
+scipy==1.11.4
+pandas==2.1.4
+matplotlib==3.8.4
+pillow==10.3.0
+astropy==6.0.1
+healpy==1.16.6
+h5py==3.11.0
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+jupyter==1.0.0
+ipykernel==6.29.4
+ipywidgets==8.1.2
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+requests==2.31.0
+tqdm==4.66.2
